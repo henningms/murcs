@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#left-menu {
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  background-color: #3DC6F4;
+}
+
+#left-menu h1 {
+  color: white;
+
+  font-size: 4em;
+  text-align: center;
+
+  padding-top: 1em;
+
+  font-weight: 200;
+}
+
+#right-content {
+  width: 75%;
+  margin-left: 25%;
+  position: absolute;
+}
+
+h2
+{
+  color: #2E3436;
+
+  font-size: 2em;
+  font-weight: 200;
+
+  padding: 0.5em;
+  padding-top: 1em;
+}
+
+#collaborators
+{
+  padding: 1em;
+}
+.collaborator
+{
+  
+}
+
+.collaborator .image {
+  float: left;
+}
+
+.collaborator .name {
+  float: left;
+
+  font-weight: 200;
+  font-size: 1.2em;
+  margin-left: 0.5em;
+
+  line-height: 65px;
+}
+
+#tasks
+{
+  padding: 2em;
+}
+
+.task
+{
+  float: left;
+  background-color: #D9FF00;
+
+  padding: 1em;
+  margin: 0.5em 0.5em 0 0;
+
+  font-weight: 100;
+  font-size: 2em;
+
+  width: 25%;
+  height: 25%;
+}
