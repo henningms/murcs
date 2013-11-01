@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Murcs.AddTask"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <Border Grid.Row="0" Margin="0" Padding="12,20,12,20" Background="{StaticResource ApplicationMainColor}" Height="136">
+            <StackPanel Grid.Row="0" Margin="0" Background="{StaticResource ApplicationMainColor}">
+                <TextBlock Text="add task" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+        </Border>
+        
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Margin="12,23,12,12">
+                <TextBlock Text="Task description" Foreground="Black" FontSize="{StaticResource PhoneFontSizeNormal}" Margin="0" />
+                <TextBox TextWrapping="Wrap" Name="TaskDescriptionTextBox" BorderBrush="#FF0085B1" SelectionBackground="#FF8ADBF5" AcceptsReturn="True" Height="191" Margin="-12,0,0,0" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="DeepSkyBlue">
+            <shell:ApplicationBarIconButton x:Name="SaveTaskAppBarButton" IconUri="Assets/AppBar/save.png" Text="save task" Click="SaveTaskAppBarButton_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

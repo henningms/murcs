@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mobileservices-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Scrum/libs/mobileservices-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Scrum/libs/notification-hubs-0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Scrum/libs/notifications-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
