@@ -32,6 +32,7 @@ body, html {
   width: 75%;
   margin-left: 430px;
   position: absolute;
+
 }
 
 h2
@@ -43,6 +44,11 @@ h2
 
   padding: 0.5em;
   padding-top: 1em;
+}
+
+#right-content h2 {
+    margin-left: 1em;
+    margin-top: 1.5em;
 }
 
 #collaborators
@@ -72,6 +78,11 @@ h2
 {
   padding-left: 3em;
   padding-top: 3em;
+
+  -webkit-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-moz-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-o-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0
 }
 
 .task {
@@ -94,6 +105,11 @@ h2
 
     margin-right: 70px;
     margin-bottom: 50px;
+
+    -webkit-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-moz-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-o-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0
 }
 
 .task-text {

@@ -8,7 +8,7 @@ var tasksTable = client.getTable("Task");
 
 
 var refreshTasks = function () {
-    tasksTable.read().done(function (results) {
+    tasksTable.orderByDescending("CreatedAt").read().done(function (results) {
         buildTasks(results);
     });
 };
@@ -23,6 +23,7 @@ var refreshUsers = function () {
 
 var buildParticipants = function (users) {
 
+    $("#collaborators").html("");
     for (var i = 0; i < users.length; i++)
     {
         var user = users[i];
@@ -45,12 +46,12 @@ var buildParticipants = function (users) {
         var clear = $("<div/>");
         clear.addClass("clear");
 
-        collaborator.hide();
+        //collaborator.hide();
 
         $("#collaborators").append(collaborator);
         $("#collaborators").append(clear);
 
-        collaborator.fadeIn();
+        //collaborator.fadeIn();
     }
 
 };
@@ -83,12 +84,24 @@ var buildTasks = function (tasks) {
 
         div.append(imageDiv);
 
-        div.hide();
+        //div.hide();
         $("#tasks").append(div);
 
-        div.fadeIn();
+        //div.fadeIn();
     }
 };
 
 refreshTasks();
 refreshUsers();
+
+var timer = function () {
+    setTimeout(function () {
+        console.log("Refreshing..");
+        refreshTasks();
+        refreshUsers();
+        
+        timer();
+    }, 5000);
+}
+
+timer();
